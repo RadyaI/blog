@@ -13,13 +13,19 @@ import { useEffect, useState } from "react";
 export default function Navbar() {
 
     const router = useRouter()
-    const params = useSearchParams()
+    const search = useSearchParams()
 
     const [toggleContact, setToggleContact] = useState<boolean>(false)
 
     useEffect(() => {
-        console.log(params.get("search"))
+        console.log(search.get("search"))
     }, [])
+
+    function updateFilter(e: string){
+        const params = new URLSearchParams(search.toString())
+        params.set("filter", e)
+        router.push(`?${params.toString()}`)
+    }
 
     function Contact() {
         return (
@@ -52,9 +58,9 @@ export default function Navbar() {
             <div className="p-4 flex flex-col sm:flex-row justify-between items-center">
                 <p className="font-bold text-3xl ml-2">RaWrites.</p>
                 <div className="p-2 mt-4 sm:mt-0 w-1/3 flex justify-center gap-5">
-                    <p onClick={() => router.push("?filter=Coding")} className="font-semibold rounded-xl bg-green-200 hover:bg-green-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><FaCode />Coding</p>
-                    <p onClick={() => router.push("?filter=Tutorial")} className="font-semibold rounded-xl bg-amber-200 hover:bg-amber-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><MdOutlineTipsAndUpdates />Tutorial</p>
-                    <p onClick={() => router.push("?filter=Talk")} className="font-semibold rounded-xl bg-blue-200 hover:bg-blue-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><IoChatboxEllipsesOutline />Talk</p>
+                    <p onClick={() => updateFilter("Coding")} className="font-semibold rounded-xl bg-green-200 hover:bg-green-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><FaCode />Coding</p>
+                    <p onClick={() => updateFilter("Tutorial")} className="font-semibold rounded-xl bg-amber-200 hover:bg-amber-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><MdOutlineTipsAndUpdates />Tutorial</p>
+                    <p onClick={() => updateFilter("Talk")} className="font-semibold rounded-xl bg-blue-200 hover:bg-blue-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><IoChatboxEllipsesOutline />Talk</p>
                 </div>
                 <div className="hidden sm:flex">
                     <a href="https://radya.fun" target="_blank"><p className="mr-4 cursor-pointer hover:underline">Radya</p></a>

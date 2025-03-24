@@ -23,3 +23,7 @@ body {
   font-family: "Roboto";
   overflow-x: hidden;
 }
+
+body::-webkit-scrollbar{
+  display: none;
+}

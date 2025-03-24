@@ -1,13 +1,20 @@
 "use client"
 
 import Image from "next/image"
-import { useSearchParams } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { BiSearch } from "react-icons/bi"
 
 export default function Title() {
 
-    const searchParams = useSearchParams()
-    const filter = searchParams.get("filter")
+    const router = useRouter()
+    const search = useSearchParams()
+
+    function updateFilter(e: string) {
+        const params = new URLSearchParams(search.toString()); 
+        params.set("search", e);
+      
+        router.push(`?${params.toString()}`);
+      }
 
     return (
         <>
@@ -32,7 +39,7 @@ export default function Title() {
                         <div className="cursor-pointer text-[grey] shadow-xl rounded-l-full text-3xl h-full flex items-center pl-4 pr-1 bg-white">
                             <BiSearch></BiSearch>
                         </div>
-                        <input type="text" placeholder="Search..." className="shadow-xl bg-white rounded-r-full outline-none w-4/5 pr-5 pl-2 py-3" />
+                        <input onChange={(e) => updateFilter(e.target.value)} type="text" placeholder="Search..." className="shadow-xl bg-white rounded-r-full outline-none w-4/5 pr-5 pl-2 py-3" />
                     </div>
                 </div>
                 <div className="-mr-10 hidden mt-5 sm:flex gap-4 sm:flex-col border-[red] w-1/3">
