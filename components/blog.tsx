@@ -13,8 +13,10 @@ export default function Blog() {
     useEffect(() => {
         if (search.get("filter") || search.get("search")) {
             setIsFilter(true)
+        } else {
+            setIsFilter(false)
         }
-    }, [search])
+    }, [search.toString()])
 
     function clearFilter(){
         setIsFilter(false)
