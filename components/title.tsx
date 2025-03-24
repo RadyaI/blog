@@ -34,7 +34,7 @@ export default function Title() {
                 </div>
                 <div className="p-2 w-full sm:w-1/2 flex flex-col items-center justify-center relative">
                     <div id="hiasan" className="rounded-full bg-blue-300 blur-[35px] w-15 h-15 absolute bottom-5 right-6 z-0"></div>
-                    <p className="text-4xl sm:text-5xl">What's on your mind?</p>
+                    <p className="text-4xl sm:text-5xl">What&apos;s on your mind?</p>
                     <div className="z-10 flex items-center justify-center w-full mt-5">
                         <div className="cursor-pointer text-[grey] shadow-xl rounded-l-full text-3xl h-full flex items-center pl-4 pr-1 bg-white">
                             <BiSearch></BiSearch>

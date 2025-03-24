@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import { Suspense } from "react";
 
 const roboto = Roboto({
-  variable: "--roboto"  
+  variable: "--roboto",
+  subsets: ["latin"]
 })
 
 export const metadata: Metadata = {
@@ -22,7 +24,9 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} antialiased`}
       >
-        <Navbar />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+        </Suspense>
         {children}
       </body>
     </html>

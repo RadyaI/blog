@@ -8,6 +8,7 @@ export default function Blog() {
 
     const router = useRouter()
     const search = useSearchParams()
+    const searchString = search.toString()
     const [isFilter, setIsFilter] = useState<boolean>(false)
 
     useEffect(() => {
@@ -16,7 +17,7 @@ export default function Blog() {
         } else {
             setIsFilter(false)
         }
-    }, [search.toString()])
+    }, [searchString, search])
 
     function clearFilter(){
         setIsFilter(false)

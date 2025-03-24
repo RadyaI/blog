@@ -2,13 +2,13 @@
 
 import { FaCode } from "react-icons/fa";
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
-import { IoChatboxEllipsesOutline, IoCloseCircleSharp, IoCloseSharp } from "react-icons/io5";
+import { IoChatboxEllipsesOutline, IoCloseSharp } from "react-icons/io5";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import "animate.css"
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Navbar() {
 
@@ -16,10 +16,6 @@ export default function Navbar() {
     const search = useSearchParams()
 
     const [toggleContact, setToggleContact] = useState<boolean>(false)
-
-    useEffect(() => {
-        console.log(search.get("search"))
-    }, [])
 
     function updateFilter(e: string){
         const params = new URLSearchParams(search.toString())
@@ -36,7 +32,7 @@ export default function Navbar() {
                     </div>
                     <div>
                         <p className="font-bold text-3xl text-center text-[var(--background)]">Get In Touch</p>
-                        <p className="text-center mt-2 text-[grey]">Have a project, an idea, or just want to say hi? Feel free to reach out—I'd love to hear from you and see how we can work together!</p>
+                        <p className="text-center mt-2 text-[grey]">Have a project, an idea, or just want to say hi? Feel free to reach out—I&apos;d love to hear from you and see how we can work together!</p>
                     </div>
                     <div className="p-2 mt-3 w-[70%] mx-auto flex justify-around">
                         <a href="https://instagram.com/radyaif"><div className="w-fit hover:text-[#E1306C] text-[var(--background)] flex gap-1 text-lg cursor-pointer items-center"> <span className="text-2xl"><FaInstagram /></span> Instagram </div></a>
