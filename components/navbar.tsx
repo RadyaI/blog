@@ -24,7 +24,7 @@ export default function Navbar() {
     function Contact() {
         return (
             <>
-                <div className="animate__animated animate__slideInDown border rounded-2xl bg-black px-4 pb-10 pt-4 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <div className="z-[999999] animate__animated animate__slideInDown border rounded-2xl bg-black px-4 pb-10 pt-4 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <div className="mb-4 text-[var(--background)] flex justify-end cursor-pointer text-4xl">
                         <span onClick={() => setToggleContact(false)}><IoCloseSharp /></span>
                     </div>
