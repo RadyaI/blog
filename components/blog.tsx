@@ -46,40 +46,9 @@ export default function Blog() {
                         <div data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
                             <Image src={"/title/title8.jpg"} alt="Thumbnail" className="object-cover" fill />
                             <div className="absolute inset-0 bg-black/60 transition-all duration-300 group-hover:bg-black/30"></div>
-                            <div className="absolute bottom-0 w-full h-1/2 p-3 text-white z-10">
-                                <p className="font-semibold overflow-hidden line-clamp-2 text-ellipsis h-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae rem exercitationem neque placeat nesciunt alias nam quibusdam. Ab quaerat aliquam rem provident nobis minus natus soluta maxime similique officiis.</p>
-                                <small className="opacity-80">8 Mei 2025</small>
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
-                            <Image src={"/title/title8.jpg"} alt="Thumbnail" className="object-cover" fill />
-                            <div className="absolute inset-0 bg-black/60 transition-all duration-300 group-hover:bg-black/30"></div>
-                            <div className="absolute bottom-0 w-full h-1/2 p-3 text-white z-10">
-                                <p className="font-semibold overflow-hidden line-clamp-2 text-ellipsis h-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae rem exercitationem neque placeat nesciunt alias nam quibusdam. Ab quaerat aliquam rem provident nobis minus natus soluta maxime similique officiis.</p>
-                                <small className="opacity-80">8 Mei 2025</small>
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
-                            <Image src={"/title/title8.jpg"} alt="Thumbnail" className="object-cover" fill />
-                            <div className="absolute inset-0 bg-black/60 transition-all duration-300 group-hover:bg-black/30"></div>
-                            <div className="absolute bottom-0 w-full h-1/2 p-3 text-white z-10">
-                                <p className="font-semibold overflow-hidden line-clamp-2 text-ellipsis h-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae rem exercitationem neque placeat nesciunt alias nam quibusdam. Ab quaerat aliquam rem provident nobis minus natus soluta maxime similique officiis.</p>
-                                <small className="opacity-80">8 Mei 2025</small>
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
-                            <Image src={"/title/title8.jpg"} alt="Thumbnail" className="object-cover" fill />
-                            <div className="absolute inset-0 bg-black/60 transition-all duration-300 group-hover:bg-black/30"></div>
-                            <div className="absolute bottom-0 w-full h-1/2 p-3 text-white z-10">
-                                <p className="font-semibold overflow-hidden line-clamp-2 text-ellipsis h-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae rem exercitationem neque placeat nesciunt alias nam quibusdam. Ab quaerat aliquam rem provident nobis minus natus soluta maxime similique officiis.</p>
-                                <small className="opacity-80">8 Mei 2025</small>
-                            </div>
-                        </div>
-                        <div data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
-                            <Image src={"/title/title8.jpg"} alt="Thumbnail" className="object-cover" fill />
-                            <div className="absolute inset-0 bg-black/60 transition-all duration-300 group-hover:bg-black/30"></div>
-                            <div className="absolute bottom-0 w-full h-1/2 p-3 text-white z-10">
-                                <p className="font-semibold overflow-hidden line-clamp-2 text-ellipsis h-[70%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae rem exercitationem neque placeat nesciunt alias nam quibusdam. Ab quaerat aliquam rem provident nobis minus natus soluta maxime similique officiis.</p>
+                            <div className="absolute bottom-0 w-full h-[65%] p-3 text-white z-10">
+                                <span className="w-full h-full"><small>Radya</small></span>
+                                <p className="font-semibold overflow-hidden line-clamp-2 text-ellipsis h-[50%]">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente molestiae rem exercitationem neque placeat nesciunt alias nam quibusdam. Ab quaerat aliquam rem provident nobis minus natus soluta maxime similique officiis.</p>
                                 <small className="opacity-80">8 Mei 2025</small>
                             </div>
                         </div>

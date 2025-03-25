@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import { Suspense } from "react";
 
 const roboto = Roboto({
   variable: "--roboto",
@@ -24,9 +22,6 @@ export default function RootLayout({
       <body
         className={`${roboto.variable} antialiased`}
       >
-        <Suspense fallback={<div>Loading...</div>}>
-          <Navbar />
-        </Suspense>
         {children}
       </body>
     </html>
