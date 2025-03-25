@@ -4,7 +4,6 @@ import Image from "next/image"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
 import { BiSearch } from "react-icons/bi"
-import ScrollReveal from "scrollreveal"
 
 export default function Title() {
 
