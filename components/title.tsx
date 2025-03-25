@@ -63,7 +63,7 @@ export default function Title() {
     }, [searchString])
     return (
         <>
-            <div className="py-2 mx-auto sm:mt-2 flex sm:h-[40dvh]">
+            <div className="py-2 mx-auto sm:mt-2 pt-50 flex sm:h-[40dvh]">
                 {!isFilter && (<div className={`animate__animated ${isAnimate ? "animate__fadeOutLeft" : ""} -ml-10 hidden mt-5 sm:flex gap-4 sm:flex-col border-[red] w-1/3`}>
                     <div className="w-full h-1/2 flex items-end justify-around">
                         <div className="img w-30 h-30 rounded-xl relative"><Image className="object-cover rounded-xl" src={"/title/title1.png"} fill alt="Foto"></Image></div>

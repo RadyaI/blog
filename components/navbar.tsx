@@ -51,7 +51,7 @@ export default function Navbar() {
     return (
         <>
             {toggleContact && (<Contact />)}
-            <div className="p-4 flex flex-col sm:flex-row justify-between items-center">
+            <div className="p-4 bg-[#F5EEDC] z-[99999] top-0 flex fixed w-full flex-col sm:flex-row justify-between items-center">
                 <p className="font-bold text-3xl ml-2">RaWrites.</p>
                 <div className="p-2 mt-4 sm:mt-0 w-1/3 flex justify-center gap-5">
                     <p onClick={() => updateFilter("Coding")} className="font-semibold rounded-xl bg-green-200 hover:bg-green-300 transition-all py-1 px-3 flex items-center gap-2 cursor-pointer"><FaCode />Coding</p>
