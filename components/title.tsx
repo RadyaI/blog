@@ -33,6 +33,7 @@ export default function Title() {
 
     function showImageAnimation() {
         setIsAnimate(true)
+        setSearchValue("")
         setTimeout(() => {
             setIsAnimate(false)
             setIsFilter(false)
@@ -40,9 +41,9 @@ export default function Title() {
     }
 
     useEffect(() => {
-        if(typeof window !== "undefined"){
+        if (typeof window !== "undefined") {
             import("scrollreveal").then((ScrollReveal) => {
-                ScrollReveal.default().reveal(".img", {reset: true, interval: 60})
+                ScrollReveal.default().reveal(".img", { reset: true, interval: 60 })
             })
         }
     }, [isFilter])
@@ -77,10 +78,10 @@ export default function Title() {
                         <div className="img w-10 h-10 rounded-xl relative"><Image className="object-cover rounded-xl" src={"/title/title7.png"} fill alt="Foto"></Image></div>
                     </div>
                 </div>)}
-                <div className="p-2 mx-auto w-full sm:w-1/2 flex flex-col items-center justify-center relative">
+                <div className="mx-auto w-full sm:w-[39%] flex flex-col items-center justify-center relative">
                     <div id="hiasan" className="rounded-full bg-blue-300 blur-[35px] w-15 h-15 absolute bottom-5 right-6 z-0"></div>
                     <p className="text-4xl sm:text-5xl">What&apos;s on your mind?</p>
-                    <div className="z-10 flex items-center justify-center w-full mt-5">
+                    <div className="z-10 w-full flex items-center justify-center mt-5">
                         <div className="cursor-pointer text-[grey] shadow-xl rounded-l-full text-3xl h-full flex items-center pl-4 pr-1 bg-white">
                             <BiSearch></BiSearch>
                         </div>
