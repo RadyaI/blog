@@ -39,7 +39,7 @@ export default function Blog() {
                 )}
                 <div className={`animate__animated animate__fadeInUp flex flex-wrap justify-start gap-3`}>
 
-                    <div onClick={() => router.push("/belajar machine learning")} data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
+                    <div onClick={() => router.push("/Rangkuman Data untuk AI")} data-aos="fade-up" className="mt-4 w-full sm:w-[24%] h-[180px] relative rounded-xl cursor-pointer overflow-hidden group">
                         <Image src={"/title/title6.png"} alt="Thumbnail" className="object-cover" fill />
                         <div className="absolute inset-0 bg-black/60 transition-all duration-300 group-hover:bg-black/30"></div>
                         <div className="absolute bottom-0 w-full h-1/2 p-3 text-white z-10">
