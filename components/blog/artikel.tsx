@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { GoDotFill } from "react-icons/go";
 import { FaSun, FaMoon, FaGithub, FaLink, FaComment, FaEye } from "react-icons/fa";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import toast, { Toaster } from "react-hot-toast";
@@ -13,6 +13,11 @@ import toast, { Toaster } from "react-hot-toast";
 export default function Artikel({ title }: { title: string }) {
 
     const router = useRouter()
+
+    useEffect(() => {
+        router.prefetch("/")
+    }, [])
+
     const [theme, setTheme] = useState<string>("light")
 
     const text = `# 📦 Rangkuman Data untuk AI 
@@ -168,13 +173,13 @@ Keep learning, keep exploring, dan jangan lupa...
                     position="top-center"
                 />
                 <div className={`fixed ${theme === "dark" ? "text-[var(--background)]" : ""} shadow-2xl rounded-md sm:flex sm:flex-col gap-7 hidden h-fit top-[22%] p-3 py-6 left-15`}>
-                    <div className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-2xl"><FaGithub></FaGithub></div>
+                    <a href="https://github.com/RadyaI" target="_blank"><div className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-xl"><FaGithub></FaGithub></div></a>
                     <div className="flex flex-col items-center">
-                        <div className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex flex-col justify-center items-center text-2xl"><FaEye></FaEye></div>
-                        <span className="text-sm">43</span>
+                        <div className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex flex-col justify-center items-center text-xl"><FaEye></FaEye></div>
+                        <span className="text-sm">1</span>
                     </div>
-                    <div onClick={comment} className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-2xl"><FaComment></FaComment></div>
-                    <div onClick={() => copyLink()} className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-2xl"><FaLink></FaLink></div>
+                    <div onClick={comment} className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-xl"><FaComment></FaComment></div>
+                    <div onClick={() => copyLink()} className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-xl"><FaLink></FaLink></div>
                 </div>
             </>
         )
