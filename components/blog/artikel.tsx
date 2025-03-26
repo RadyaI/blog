@@ -167,7 +167,7 @@ Keep learning, keep exploring, dan jangan lupa...
                 <Toaster
                     position="top-center"
                 />
-                <div className="fixed shadow-2xl rounded-md sm:flex sm:flex-col gap-7 hidden h-fit top-[22%] p-3 py-6 left-15">
+                <div className={`fixed ${theme === "dark" ? "text-[var(--background)]" : ""} shadow-2xl rounded-md sm:flex sm:flex-col gap-7 hidden h-fit top-[22%] p-3 py-6 left-15`}>
                     <div className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex justify-center items-center text-2xl"><FaGithub></FaGithub></div>
                     <div className="flex flex-col items-center">
                         <div className="border border-gray-600 rounded-full w-13 h-13 cursor-pointer flex flex-col justify-center items-center text-2xl"><FaEye></FaEye></div>
