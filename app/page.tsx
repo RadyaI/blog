@@ -1,4 +1,4 @@
-import Blog from "@/components/blog"
+import Blog from "@/components/blogHome"
 import Title from "@/components/title"
 import Navbar from "@/components/navbar";
 import { Suspense } from "react"
