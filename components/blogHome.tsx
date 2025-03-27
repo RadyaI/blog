@@ -23,6 +23,10 @@ export default function Blog() {
         }
     }, [searchString, search])
 
+    useEffect(() => {
+        router.prefetch("/Rangkuman Data untuk AI")
+    }, [router])
+
     function clearFilter() {
         router.replace("/")
         setIsFilter(false)
